@@ -27,19 +27,7 @@ CREATE TABLE IF NOT EXISTS `Avoir` (
   CONSTRAINT `FK__Parent` FOREIGN KEY (`idParent`) REFERENCES `Parent` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Listage des données de la table projet_livre.Avoir : ~9 rows (environ)
-/*!40000 ALTER TABLE `Avoir` DISABLE KEYS */;
-INSERT INTO `Avoir` (`idParent`, `idEnfant`) VALUES
-	(1, 1),
-	(2, 2),
-	(3, 3),
-	(4, 4),
-	(5, 5),
-	(6, 6),
-	(7, 7),
-	(8, 8),
-	(9, 9);
-/*!40000 ALTER TABLE `Avoir` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de la table projet_livre. Enfant
 CREATE TABLE IF NOT EXISTS `Enfant` (
@@ -50,19 +38,7 @@ CREATE TABLE IF NOT EXISTS `Enfant` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
--- Listage des données de la table projet_livre.Enfant : ~9 rows (environ)
-/*!40000 ALTER TABLE `Enfant` DISABLE KEYS */;
-INSERT INTO `Enfant` (`id`, `nom`, `prenom`, `classe`) VALUES
-	(1, 'testEnfant', 'testEnfant', 'testClasse'),
-	(2, 'arno', 'arno', 'ce1'),
-	(3, 'nomenfant', 'prenomenfant', 'classe'),
-	(4, 'nomenfant', 'prenomenfant', 'classe'),
-	(5, 'nomenfant', 'prenomenfant', 'classe'),
-	(6, 'nomenfant', 'prenomenfant', 'classe'),
-	(7, 'nomenfant', 'prenomenfant', 'classe'),
-	(8, 'nomenfant', 'prenomenfant', 'classe'),
-	(9, 'nomenfant', 'prenomenfant', 'classe');
-/*!40000 ALTER TABLE `Enfant` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de la procédure projet_livre. InscrireParent
 DELIMITER //
@@ -83,27 +59,7 @@ CREATE TABLE IF NOT EXISTS `Livre` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
--- Listage des données de la table projet_livre.Livre : ~17 rows (environ)
-/*!40000 ALTER TABLE `Livre` DISABLE KEYS */;
-INSERT INTO `Livre` (`id`, `Titre`, `Auteur`, `ISBN`) VALUES
-	(1, 'Mon fils ma bataille', 'le Z', '2'),
-	(2, 'Combat', 'laid', '3'),
-	(3, 'OUI-OUI', 'Enid Blyton', '1'),
-	(4, 'Mickey mousse', 'pierre', '4'),
-	(5, 'Les barbes a tonton', 'mon Tonton', '5'),
-	(6, 'Martine découvre le canibalisme', 'Martoche', '6'),
-	(7, 'Recette de choucroute', 'alca=sace', '12'),
-	(8, 'Le suicide français', 'Eric', '7'),
-	(9, 'Le temps des tempêtes', 'Nico', '8'),
-	(10, 'le guide du zizi sexuel', 'zep', '9'),
-	(11, 'Anne-Sophie', 'Baruff', '10'),
-	(12, 'Flavie', 'Baruff', '11'),
-	(13, 'Rose', 'Raph', '14'),
-	(14, 'Il est rentré dans la Marine!', 'Baruff', '13'),
-	(15, 'Super niquel!', 'Michel Dumat', '15'),
-	(16, 'Super nani', 'Tati', '16'),
-	(17, 'origina', 'Baruff', '17');
-/*!40000 ALTER TABLE `Livre` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de la table projet_livre. Noter
 CREATE TABLE IF NOT EXISTS `Noter` (
@@ -119,14 +75,7 @@ CREATE TABLE IF NOT EXISTS `Noter` (
   CONSTRAINT `FK_Noter_Parent` FOREIGN KEY (`idParent`) REFERENCES `Parent` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Listage des données de la table projet_livre.Noter : ~4 rows (environ)
-/*!40000 ALTER TABLE `Noter` DISABLE KEYS */;
-INSERT INTO `Noter` (`idParent`, `idLivre`, `dateNote`, `note`, `commentaire`) VALUES
-	(1, 1, '2022-04-08', '10', 'aa'),
-	(1, 9, '2022-04-08', '7', 'aa'),
-	(1, 12, '2022-04-08', '9', 'Voici un magnifique commentaire!'),
-	(2, 10, '2022-04-08', '10', 'aa');
-/*!40000 ALTER TABLE `Noter` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de la table projet_livre. Parent
 CREATE TABLE IF NOT EXISTS `Parent` (
@@ -136,19 +85,7 @@ CREATE TABLE IF NOT EXISTS `Parent` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COMMENT='mdp test= identifiant';
 
--- Listage des données de la table projet_livre.Parent : ~9 rows (environ)
-/*!40000 ALTER TABLE `Parent` DISABLE KEYS */;
-INSERT INTO `Parent` (`id`, `identifiant`, `motDePasse`) VALUES
-	(1, 'test', 'e9810be42b641ac22263b6acf79e0afed1f3b466cd966a5872ebb184c8e42231'),
-	(2, 'alizee', '564af63730aa2443f01789d801391af826f21e177f3d98e68acf4ae1297f91d6'),
-	(3, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(4, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(5, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(6, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(7, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(8, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46'),
-	(9, 'testinscription', '5b10407decef880044a6b9160c4779da9e3aab9768a9bf77fe5b958184107e46');
-/*!40000 ALTER TABLE `Parent` ENABLE KEYS */;
+-- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de la procédure projet_livre. SelectComNote
 DELIMITER //
